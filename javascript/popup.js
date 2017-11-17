@@ -26,44 +26,44 @@ if (localStorage.phrase) {
     decodedPhrase = CryptoJS.AES.decrypt(document.cookie.split('passphrase=')[1], '').toString(CryptoJS.enc.Utf8);
 }
 
-document.getElementById('extName').innerText = chrome.i18n.getMessage('extShortName');
-document.getElementById('add_qr').innerText = chrome.i18n.getMessage('add_qr');
-document.getElementById('add_secret').innerText = chrome.i18n.getMessage('add_secret');
-document.getElementById('totp_label').innerText = chrome.i18n.getMessage('based_on_time');
-document.getElementById('hotp_label').innerText = chrome.i18n.getMessage('based_on_counter');
-document.getElementById('add_button').innerText = chrome.i18n.getMessage('ok');
-document.getElementById('message_close').innerText = chrome.i18n.getMessage('ok');
-document.getElementById('account_label').innerText = chrome.i18n.getMessage('account');
-document.getElementById('secret_label').innerText = chrome.i18n.getMessage('secret');
-document.getElementById('menuName').innerText = chrome.i18n.getMessage('settings');
-document.getElementById('security_new_phrase_label').innerText = chrome.i18n.getMessage('phrase');
-document.getElementById('security_confirm_phrase_label').innerText = chrome.i18n.getMessage('confirm_phrase');
-document.getElementById('security_warning').innerText = chrome.i18n.getMessage('security_warning');
-document.getElementById('exportButton').innerText = chrome.i18n.getMessage('update');
-document.getElementById('resize_save').innerText = chrome.i18n.getMessage('ok');
-document.getElementById('security_save').innerText = chrome.i18n.getMessage('ok');
-document.getElementById('passphrase_info').innerText = chrome.i18n.getMessage('passphrase_info');
-document.getElementById('passphrase_phrase_label').innerText = chrome.i18n.getMessage('passphrase');
-document.getElementById('remember_new_phrase_label').innerText = chrome.i18n.getMessage('remember_phrase');
-document.getElementById('remember_phrase_label').innerText = chrome.i18n.getMessage('remember_phrase');
-document.getElementById('resize_list_label').innerText = chrome.i18n.getMessage('scale');
-document.getElementById('passphrase_ok').innerText = chrome.i18n.getMessage('ok');
-document.getElementById('version').innerText = 'Version ' + chrome.runtime.getManifest().version;
+document.getElementById('extName').innerText = browser.i18n.getMessage('extShortName');
+document.getElementById('add_qr').innerText = browser.i18n.getMessage('add_qr');
+document.getElementById('add_secret').innerText = browser.i18n.getMessage('add_secret');
+document.getElementById('totp_label').innerText = browser.i18n.getMessage('based_on_time');
+document.getElementById('hotp_label').innerText = browser.i18n.getMessage('based_on_counter');
+document.getElementById('add_button').innerText = browser.i18n.getMessage('ok');
+document.getElementById('message_close').innerText = browser.i18n.getMessage('ok');
+document.getElementById('account_label').innerText = browser.i18n.getMessage('account');
+document.getElementById('secret_label').innerText = browser.i18n.getMessage('secret');
+document.getElementById('menuName').innerText = browser.i18n.getMessage('settings');
+document.getElementById('security_new_phrase_label').innerText = browser.i18n.getMessage('phrase');
+document.getElementById('security_confirm_phrase_label').innerText = browser.i18n.getMessage('confirm_phrase');
+document.getElementById('security_warning').innerText = browser.i18n.getMessage('security_warning');
+document.getElementById('exportButton').innerText = browser.i18n.getMessage('update');
+document.getElementById('resize_save').innerText = browser.i18n.getMessage('ok');
+document.getElementById('security_save').innerText = browser.i18n.getMessage('ok');
+document.getElementById('passphrase_info').innerText = browser.i18n.getMessage('passphrase_info');
+document.getElementById('passphrase_phrase_label').innerText = browser.i18n.getMessage('passphrase');
+document.getElementById('remember_new_phrase_label').innerText = browser.i18n.getMessage('remember_phrase');
+document.getElementById('remember_phrase_label').innerText = browser.i18n.getMessage('remember_phrase');
+document.getElementById('resize_list_label').innerText = browser.i18n.getMessage('scale');
+document.getElementById('passphrase_ok').innerText = browser.i18n.getMessage('ok');
+document.getElementById('version').innerText = 'Version ' + browser.runtime.getManifest().version;
 
-document.getElementById('menuAbout').innerHTML += chrome.i18n.getMessage('about');
-document.getElementById('menuExImport').innerHTML += chrome.i18n.getMessage('export_import');
-document.getElementById('menuSecurity').innerHTML += chrome.i18n.getMessage('security');
-document.getElementById('menuSyncTime').innerHTML += chrome.i18n.getMessage('sync_clock');
-document.getElementById('menuResize').innerHTML += chrome.i18n.getMessage('resize_popup_page');
-document.getElementById('menuSource').innerHTML += chrome.i18n.getMessage('source');
-document.getElementById('menuFeedback').innerHTML += chrome.i18n.getMessage('feedback');
+document.getElementById('menuAbout').innerHTML += browser.i18n.getMessage('about');
+document.getElementById('menuExImport').innerHTML += browser.i18n.getMessage('export_import');
+document.getElementById('menuSecurity').innerHTML += browser.i18n.getMessage('security');
+document.getElementById('menuSyncTime').innerHTML += browser.i18n.getMessage('sync_clock');
+document.getElementById('menuResize').innerHTML += browser.i18n.getMessage('resize_popup_page');
+document.getElementById('menuSource').innerHTML += browser.i18n.getMessage('source');
+document.getElementById('menuFeedback').innerHTML += browser.i18n.getMessage('feedback');
 
 if (localStorage.notRememberPassphrase === 'true') {
     document.getElementById('remember_new_phrase').checked = false;
     document.getElementById('remember_phrase').checked = false;
 }
 
-chrome.storage.sync.get(showCodes);
+browser.storage.sync.get(showCodes);
 
 document.getElementById('menuExImport').onclick = showExport;
 
@@ -71,7 +71,7 @@ document.getElementById('menuAbout').onclick = function () {
     document.getElementById('info').className = 'fadein';
     setTimeout(function () {
         document.getElementById('info').style.opacity = 1;
-        document.getElementById('infoContent').innerHTML = chrome.i18n.getMessage('info');
+        document.getElementById('infoContent').innerHTML = browser.i18n.getMessage('info');
     }, 200);
 }
 
@@ -82,7 +82,7 @@ document.getElementById('menuSecurity').onclick = function () {
     }, 200);
 }
 
-chrome.permissions.contains({
+browser.permissions.contains({
     origins : ['https://www.google.com/']
 }, function (hasPermission) {
     if (hasPermission) {
@@ -91,7 +91,7 @@ chrome.permissions.contains({
 });
 
 document.getElementById('menuSyncTime').onclick = function () {
-    chrome.permissions.request({
+    browser.permissions.request({
         origins : ['https://www.google.com/']
     }, function (granted) {
         if (granted) {
@@ -122,7 +122,7 @@ document.getElementById('security_save').onclick = function () {
         localStorage.notRememberPassphrase = (!document.getElementById('remember_new_phrase').checked).toString();
         document.getElementById('remember_phrase').checked = document.getElementById('remember_new_phrase').checked;
         encryptSecret(phrase, true, function () {
-            showMessage(chrome.i18n.getMessage('updateSuccess'), function () {
+            showMessage(browser.i18n.getMessage('updateSuccess'), function () {
                 document.getElementById('security').className = 'fadeout';
                 setTimeout(function () {
                     document.getElementById('security').className = '';
@@ -130,10 +130,10 @@ document.getElementById('security_save').onclick = function () {
                 }, 200);
             });
         }, function () {
-            showMessage(chrome.i18n.getMessage('phrase_incorrect'));
+            showMessage(browser.i18n.getMessage('phrase_incorrect'));
         });
     } else {
-        showMessage(chrome.i18n.getMessage('phrase_not_match'));
+        showMessage(browser.i18n.getMessage('phrase_not_match'));
     }
 }
 
@@ -150,7 +150,7 @@ document.getElementById('phrase').onkeydown = function(e) {
                 document.getElementById('passphrase').style.opacity = 0;
             }, 200);
         }, function () {
-            showMessage(chrome.i18n.getMessage('phrase_incorrect'));
+            showMessage(browser.i18n.getMessage('phrase_incorrect'));
         });
     }
 }
@@ -167,7 +167,7 @@ document.getElementById('passphrase_ok').onclick = function () {
             document.getElementById('passphrase').style.opacity = 0;
         }, 200);
     }, function () {
-        showMessage(chrome.i18n.getMessage('phrase_incorrect'));
+        showMessage(browser.i18n.getMessage('phrase_incorrect'));
     });
 }
 
@@ -259,12 +259,12 @@ document.getElementById('exportButton').onclick = function () {
     var data = document.getElementById('exportData').value;
     try {
         data = JSON.parse(data);
-        chrome.storage.sync.set(data, function () {
+        browser.storage.sync.set(data, function () {
             if (decodedPhrase) {
                 encryptSecret(decodedPhrase, true);
             }
-            chrome.storage.sync.get(showCodes);
-            showMessage(chrome.i18n.getMessage('updateSuccess'), function () {
+            browser.storage.sync.get(showCodes);
+            showMessage(browser.i18n.getMessage('updateSuccess'), function () {
                 document.getElementById('export').className = 'fadeout';
                 setTimeout(function () {
                     document.getElementById('export').className = '';
@@ -274,7 +274,7 @@ document.getElementById('exportButton').onclick = function () {
             });
         });
     } catch (e) {
-        showMessage(chrome.i18n.getMessage('updateFailure'));
+        showMessage(browser.i18n.getMessage('updateFailure'));
     }
 }
 
@@ -318,10 +318,10 @@ function updateSecret(callback) {
         }
     }
     _secret = sortCode();
-    chrome.storage.sync.remove(deleteKeyList, function () {
+    browser.storage.sync.remove(deleteKeyList, function () {
         deleteIdList = [];
         deleteKeyList = [];
-        chrome.storage.sync.get(function (secret) {
+        browser.storage.sync.get(function (secret) {
             var changeSecret = {};
             for (var i = 0; i < _secret.length; i++) {
                 if (secret[_secret[i].secret] && (secret[_secret[i].secret].index != _secret[i].index ||
@@ -337,11 +337,11 @@ function updateSecret(callback) {
                 }
             }
             if (changeSecret) {
-                chrome.storage.sync.set(changeSecret, function () {
+                browser.storage.sync.set(changeSecret, function () {
                     if (callback) {
                         callback();
                     } else {
-                        chrome.storage.sync.get(showCodes);
+                        browser.storage.sync.get(showCodes);
                         codes.scrollTop = 0;
                     }
                 });
@@ -349,7 +349,7 @@ function updateSecret(callback) {
                 if (callback) {
                     callback();
                 } else {
-                    chrome.storage.sync.get(showCodes);
+                    browser.storage.sync.get(showCodes);
                     codes.scrollTop = 0;
                 }
             }
@@ -374,7 +374,7 @@ function saveSecret() {
     var secret = document.getElementById('secret_input').value;
     var type = document.getElementById('totp').checked ? 'totp' : 'hotp';
     if (!account || !secret) {
-        showMessage(chrome.i18n.getMessage('err_acc_sec'));
+        showMessage(browser.i18n.getMessage('err_acc_sec'));
         return;
     }
     var battleRegEx = /^(bliz-|blz-)/gi;
@@ -382,15 +382,15 @@ function saveSecret() {
     if(battleRegEx.test(secret) || steamRegEx.test(secret)) {
         var tmp = secret.substring(secret.indexOf('-') + 1);
         if(checkSecret(tmp, 'base32')) {
-            showMessage(chrome.i18n.getMessage('errorsecret') + secret);
+            showMessage(browser.i18n.getMessage('errorsecret') + secret);
             return;
         }
     } else if(checkSecret(secret, 'hex') && checkSecret(secret, 'base32')) {
-        showMessage(chrome.i18n.getMessage('errorsecret') + secret);
+        showMessage(browser.i18n.getMessage('errorsecret') + secret);
         return;
     }
     updateSecret(function () {
-        chrome.storage.sync.get(function (result) {
+        browser.storage.sync.get(function (result) {
             var index = Object.keys(result).length;
             var addSecret = {};
             if (decodedPhrase) {
@@ -414,7 +414,7 @@ function saveSecret() {
             if ('hotp' === type) {
                 addSecret[CryptoJS.MD5(secret)].counter = 0;
             }
-            chrome.storage.sync.set(addSecret);
+            browser.storage.sync.set(addSecret);
             document.getElementById('infoAction').className = '';
             document.getElementById('addAccount').className = '';
             document.getElementById('addAccount').style.opacity = 0;
@@ -422,23 +422,23 @@ function saveSecret() {
             document.getElementById('secret_input').value = '';
             document.getElementById('editAction').setAttribute('edit', 'false');
             document.getElementById('editAction').innerHTML = '<i class="fa fa-pencil"></i>';
-            chrome.storage.sync.get(showCodes);
+            browser.storage.sync.get(showCodes);
         });
     });
 }
 
 function beginCapture(preventEdit) {
     capturing = !!preventEdit;
-    chrome.tabs.query({
+    browser.tabs.query({
         active : true,
         lastFocusedWindow : true
     }, function (tabs) {
         var tab = tabs[0];
-        chrome.tabs.sendMessage(tab.id, {
+        browser.tabs.sendMessage(tab.id, {
             action : 'capture'
         }, function (result) {
             if (result !== 'beginCapture') {
-                showMessage(chrome.i18n.getMessage('capture_failed'));
+                showMessage(browser.i18n.getMessage('capture_failed'));
             } else {
                 updateSecret(function () {
                     window.close();
@@ -556,7 +556,7 @@ function deleteCode() {
 function updateCode() {
     for (var i = 0; i < _secret.length; i++) {
         if (!_secret[i].secret) {
-            document.getElementById('code-' + i).innerText = chrome.i18n.getMessage('encrypted');
+            document.getElementById('code-' + i).innerText = browser.i18n.getMessage('encrypted');
             document.getElementById('showqr-' + i).className = 'showqr hidden';
             if (!shownPassphrase) {
                 shownPassphrase = true;
@@ -642,7 +642,7 @@ function showCodes(result) {
         document.getElementById('editAction').innerHTML = '<i class="fa fa-pencil"></i>';
         var _secret_domain = [];
         var _secret_domain_rest = [];
-        chrome.tabs.query({
+        browser.tabs.query({
             active : true,
             lastFocusedWindow : true
         }, function (tabs) {
@@ -685,7 +685,7 @@ function showCodes(result) {
                 //    el.setAttribute('unencrypted', 'true');
                 //    var warning = document.createElement('div');
                 //    warning.className = 'warning';
-                //    warning.innerText = chrome.i18n.getMessage('unencrypted_secret_domain_warning');
+                //    warning.innerText = browser.i18n.getMessage('unencrypted_secret_domain_warning');
                 //    warning.onclick = function () {
                 //        document.getElementById('security').className = 'fadein';
                 //        setTimeout(function () {
@@ -759,8 +759,8 @@ function changeDataForm(result) {
         newResult[secret[i].secret] = secret[i];
         newResult[secret[i].secret].index = i;
     }
-    chrome.storage.sync.set(newResult);
-    chrome.storage.sync.remove('secret');
+    browser.storage.sync.set(newResult);
+    browser.storage.sync.remove('secret');
     return newResult;
 }
 
@@ -771,11 +771,11 @@ function changeDataSub2Md5(result) {
             modified = true;
             result[CryptoJS.MD5(i)] = result[i];
             delete result[i];
-            chrome.storage.sync.remove(i);
+            browser.storage.sync.remove(i);
         }
     }
     if (modified) {
-        chrome.storage.sync.set(result);
+        browser.storage.sync.set(result);
     }
     return result;
 }
@@ -806,7 +806,7 @@ function showExport() {
     document.getElementById('export').className = 'fadein';
     setTimeout(function () {
         document.getElementById('export').style.opacity = 1;
-        chrome.storage.sync.get(function (data) {
+        browser.storage.sync.get(function (data) {
             document.getElementById('exportData').value = JSON.stringify(data);
         });
     }, 200);
@@ -823,24 +823,18 @@ function copyCode() {
     } else if (!/^[0-9A-Z]+$/.test(code)) {
         return;
     }
-    chrome.permissions.request({
-        permissions : ['clipboardWrite']
-    }, function (granted) {
-        if (granted) {
-            var codeClipboard = document.getElementById('codeClipboard');
-            codeClipboard.value = code;
-            codeClipboard.focus();
-            codeClipboard.select();
-            document.execCommand('Copy');
-            showNotification(chrome.i18n.getMessage('copied'));
-        }
-    });
+    var codeClipboard = document.getElementById('codeClipboard');
+    codeClipboard.value = code;
+    codeClipboard.focus();
+    codeClipboard.select();
+    document.execCommand('Copy');
+    showNotification(browser.i18n.getMessage('copied'));
 }
 
 function encryptSecret(phrase, updatePhrase, success, fail) {
     var errorPhrase = false;
     var decryptedSecret;
-    chrome.storage.sync.get(function (result) {
+    browser.storage.sync.get(function (result) {
         for (var i in result) {
             decryptedSecret = '';
             if (result[i].encrypted && decodedPhrase) {
@@ -888,7 +882,7 @@ function encryptSecret(phrase, updatePhrase, success, fail) {
                 localStorage.encodedPhrase = CryptoJS.AES.encrypt(phrase, '').toString();
             }
         }
-        chrome.storage.sync.set(result);
+        browser.storage.sync.set(result);
         showCodes(result);
         if (errorPhrase && fail) {
             fail();
@@ -917,7 +911,7 @@ function syncTimeWithGoogle(showStatusBox) {
     var xhrAbort = setTimeout(function () {
             xhr.abort();
             if (showStatusBox) {
-                showMessage(chrome.i18n.getMessage('updateFailure'));
+                showMessage(browser.i18n.getMessage('updateFailure'));
             }
         }, 5000);
     xhr.onreadystatechange = function () {
@@ -930,15 +924,15 @@ function syncTimeWithGoogle(showStatusBox) {
             var offset = Math.round((serverTime - clientTime) / 1000);
             if (!serverTime) {
                 if (showStatusBox) {
-                    showMessage(chrome.i18n.getMessage('updateFailure'));
+                    showMessage(browser.i18n.getMessage('updateFailure'));
                 }
             } else if (Math.abs(offset) <= 300) { // within 5 minutes
                 localStorage.offset = Math.round((serverTime - clientTime) / 1000);
                 if (showStatusBox) {
-                    showMessage(chrome.i18n.getMessage('updateSuccess'));
+                    showMessage(browser.i18n.getMessage('updateSuccess'));
                 }
             } else {
-                showMessage(chrome.i18n.getMessage('clock_too_far_off'));
+                showMessage(browser.i18n.getMessage('clock_too_far_off'));
             }
         }
     };
@@ -965,9 +959,9 @@ function getNewHotpCode() {
     document.getElementById('code-' + codeId).setAttribute('hasCode', 'true');
     document.getElementById('code-' + codeId).innerText = getCode(_secret[codeId].secret, _secret[codeId].counter);
     _secret[codeId].counter++;
-    chrome.storage.sync.get(function (secret) {
+    browser.storage.sync.get(function (secret) {
         secret[CryptoJS.MD5(_secret[codeId].secret)].counter = _secret[codeId].counter;
-        chrome.storage.sync.set(secret);
+        browser.storage.sync.set(secret);
     });
 }
 
@@ -987,7 +981,7 @@ function resize(zoom) {
     if (!localStorage.lastRemindingBackupTime) {
         localStorage.lastRemindingBackupTime = clientTime;
     } else if (clientTime - localStorage.lastRemindingBackupTime >= 30 || clientTime - localStorage.lastRemindingBackupTime < 0) {
-        showMessage(chrome.i18n.getMessage('remind_backup'));
+        showMessage(browser.i18n.getMessage('remind_backup'));
         localStorage.lastRemindingBackupTime = clientTime;
     }
 

@@ -16,7 +16,7 @@ if (localStorage.phrase) {
 }
 
 function getQr(tab, left, top, width, height, windowWidth) {
-    chrome.tabs.captureVisibleTab(tab.windowId, {format: 'png'}, function (dataUrl) {
+    browser.tabs.captureVisibleTab(tab.windowId, {format: 'png'}, function (dataUrl) {
         var qr = new Image();
         qr.src = dataUrl;
         qr.onload = function () {
@@ -41,9 +41,9 @@ function getTotp(text) {
     var id = this.tab.id;
     if (text.indexOf('otpauth://') !== 0) {
         if (text === 'error decoding QR Code') {
-            chrome.tabs.sendMessage(id, {action: 'errorqr'});
+            browser.tabs.sendMessage(id, {action: 'errorqr'});
         } else {
-            chrome.tabs.sendMessage(id, {action: 'text', text: text});
+            browser.tabs.sendMessage(id, {action: 'text', text: text});
         }
     } else {
         var uri = text.split('otpauth://')[1];
@@ -52,7 +52,7 @@ function getTotp(text) {
         var label = uri.split('?')[0];
         var parameters = uri.split('?')[1];
         if (!label || !parameters) {
-            chrome.tabs.sendMessage(id, {action: 'errorqr'});
+            browser.tabs.sendMessage(id, {action: 'errorqr'});
         } else {
             var account, secret, issuer;
             label = decodeURIComponent(label);
@@ -75,11 +75,11 @@ function getTotp(text) {
                 }
             }
             if (!secret) {
-                chrome.tabs.sendMessage(id, {action: 'errorqr'});
+                browser.tabs.sendMessage(id, {action: 'errorqr'});
             } else if (!/^[0-9a-f]+$/.test(secret.toLowerCase()) && !/^[2-7a-z]+=*$/.test(secret.toLowerCase())){
-                chrome.tabs.sendMessage(id, {action: 'secretqr', secret: secret});
+                browser.tabs.sendMessage(id, {action: 'secretqr', secret: secret});
             } else {
-                chrome.storage.sync.get(function (result) {
+                browser.storage.sync.get(function (result) {
                     var index = Object.keys(result).length;
                     var addSecret = {};
                     if (decodedPhrase) {
@@ -103,8 +103,8 @@ function getTotp(text) {
                     if ('hotp' === type && counter !== undefined) {
                         addSecret[CryptoJS.MD5(secret)].counter = counter;
                     }
-                    chrome.storage.sync.set(addSecret, function() {
-                        chrome.tabs.sendMessage(id, {action: 'added', account: account});
+                    browser.storage.sync.set(addSecret, function() {
+                        browser.tabs.sendMessage(id, {action: 'added', account: account});
                     });
                 });
             }
@@ -112,7 +112,7 @@ function getTotp(text) {
     }
 }
 
-chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
+browser.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     if (message.action === 'position') {
         getQr(sender.tab, message.info.left, message.info.top, message.info.width, message.info.height, message.info.windowWidth);
     }

@@ -6,7 +6,7 @@ function showGrayLayout() {
         document.body.appendChild(grayLayout);
         var scan = document.createElement('div');
         scan.className = 'scan';
-        scan.style.background = 'url(' + chrome.extension.getURL('images/scan.gif') + ') no-repeat center';
+        scan.style.background = 'url(' + browser.extension.getURL('images/scan.gif') + ') no-repeat center';
         grayLayout.appendChild(scan);
         var captureBox = document.createElement('div');
         captureBox.id = '__ga_captureBox__';
@@ -84,7 +84,7 @@ function grayLayoutUp(event) {
 }
 
 function sendPosition(left, top, width, height) {
-    chrome.runtime.sendMessage({
+    browser.runtime.sendMessage({
         action : 'position',
         info : {
             left : left,
@@ -99,20 +99,20 @@ function sendPosition(left, top, width, height) {
 function showQrCode(msg) {
     var left = (screen.width / 2) - 200;
     var top = (screen.height / 2) - 100;
-    var url = chrome.extension.getURL('qr.html') + '?' + encodeURIComponent(msg);
+    var url = browser.extension.getURL('qr.html') + '?' + encodeURIComponent(msg);
     window.open(url, '_blank', 'toolbar=no, location=no, status=no, menubar=no, scrollbars=yes, copyhistory=no, width=400, height=200, left=' + left + ',top=' + top);
 }
 
-chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
+browser.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     if (message.action === 'capture') {
         sendResponse('beginCapture');
         showGrayLayout();
     } else if (message.action === 'errorsecret') {
-        alert(chrome.i18n.getMessage('errorsecret') + message.secret);
+        alert(browser.i18n.getMessage('errorsecret') + message.secret);
     } else if (message.action === 'errorqr') {
-        alert(chrome.i18n.getMessage('errorqr'));
+        alert(browser.i18n.getMessage('errorqr'));
     } else if (message.action === 'added') {
-        alert(message.account + chrome.i18n.getMessage('added'));
+        alert(message.account + browser.i18n.getMessage('added'));
     } else if (message.action === 'text') {
         showQrCode(message.text);
     }
