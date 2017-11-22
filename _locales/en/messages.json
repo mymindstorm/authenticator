@@ -8,7 +8,7 @@
         "description": "Extension Short Name."
     },
     "extDesc": {
-        "message": "TOTP authentication helper",
+        "message": "Authenticator generates 2-Step Verification (TOTP) codes in your browser.",
         "description": "Extension Description."
     },
     "added": {
@@ -44,7 +44,7 @@
         "description": "OK."
     },
     "err_acc_sec": {
-        "message": "Please input Account and Secret.",
+        "message": "Please enter Account and Secret.",
         "description": "Input Account and Secret."
     },
     "account": {
@@ -96,7 +96,7 @@
         "description": "Confirmm Password."
     },
     "security_warning": {
-        "message": "This password will be used to encrypt your secrets. No one can help you if you forget the password.",
+        "message": "Add a password to encrypt your secrets. No one can help you if you forget your password.",
         "description": "Password Warning."
     },
     "update": {
@@ -128,7 +128,7 @@
         "description": "Source Code."
     },
     "passphrase_info": {
-        "message": "Input password to decrypt account data.",
+        "message": "Please enter your password to decrypt account data.",
         "description": "Password Info"
     },
     "passphrase": {
@@ -148,15 +148,15 @@
         "description": "Local Time is Too Far Off"
     },
     "remind_backup": {
-        "message": "Do you have a backup for your secrets? No one can help you with getting back a locked account, don't wait until it's too late! You will be reminded again in a month.",
+        "message": "Do you have a backup for your secrets? No one can help you get back a locked account, don't wait until it's too late! This message appears once a month.",
         "description": "Remind Backup"
     },
     "capture_failed": {
-        "message": "Capture failed, please reload the page you are veiwing and try again.",
+        "message": "Capture failed, try reloading the page and trying again.",
         "description": "Capture Failed"
     },
     "unencrypted_secret_warning": {
-        "message": "This secret is not encrypted! Click here to set a password to fix this issue.",
+        "message": "This secret is not encrypted! Click here to set a password.",
         "description": "Unencrypted Secret Warning"
     },
     "based_on_time": {
@@ -172,7 +172,11 @@
         "description": "Resize Popup Page"
     },
     "scale": {
-        "message": "Scale",
+        "message": "Zoom",
         "description": "Scale"
+    },
+    "export_info": {
+        "message": "Copy this text and save it somewhere else to backup your secrets. Setting a password in the security menu is highly reccomended before you do so. Want to add an account to another app? Hover over the top right part of any account and hit the hidden button.",
+        "description": "Export menu info text"
     }
 }
