@@ -152,7 +152,7 @@
         "description": "Remind Backup"
     },
     "capture_failed": {
-        "message": "Capture failed, try reloading the page and trying again.",
+        "message": "Capture failed, reload the page and try again.",
         "description": "Capture Failed"
     },
     "unencrypted_secret_warning": {
@@ -176,7 +176,7 @@
         "description": "Scale"
     },
     "export_info": {
-        "message": "Copy this text and save it somewhere else to backup your secrets. Setting a password in the security menu is highly reccomended before you do so. Want to add an account to another app? Hover over the top right part of any account and hit the hidden button.",
+        "message": "Copy this text and save it somewhere else to backup your secrets. Setting a password in the security menu is highly reccomended before you do so. Want to add an account to another app? Hover over any account and hit the button in the top right corner.",
         "description": "Export menu info text"
     }
 }
