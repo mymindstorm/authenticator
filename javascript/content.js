@@ -111,6 +111,8 @@ browser.runtime.onMessage.addListener(function (message, sender, sendResponse) {
         alert(browser.i18n.getMessage('errorsecret') + message.secret);
     } else if (message.action === 'errorqr') {
         alert(browser.i18n.getMessage('errorqr'));
+    } else if (message.action === 'errordupe') {
+        alert(browser.i18n.getMessage('errordupe'));
     } else if (message.action === 'added') {
         alert(message.account + browser.i18n.getMessage('added'));
     } else if (message.action === 'text') {

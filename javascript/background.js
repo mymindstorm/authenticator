@@ -82,6 +82,10 @@ function getTotp(text) {
                 browser.storage.sync.get(function (result) {
                     var index = Object.keys(result).length;
                     var addSecret = {};
+                    if (result[CryptoJS.MD5(secret)]) {
+                        browser.tabs.sendMessage(id, {action: 'errordupe'});
+                        return;
+                    }
                     if (decodedPhrase) {
                         addSecret[CryptoJS.MD5(secret)] = {
                             account: account||'',

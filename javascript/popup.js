@@ -383,17 +383,21 @@ function saveSecret() {
     if(battleRegEx.test(secret) || steamRegEx.test(secret)) {
         var tmp = secret.substring(secret.indexOf('-') + 1);
         if(checkSecret(tmp, 'base32')) {
-            showMessage(browser.i18n.getMessage('errorsecret') + secret);
+            showMessage(browser.i18n.getMessage('errorsecret'));
             return;
         }
     } else if(checkSecret(secret, 'hex') && checkSecret(secret, 'base32')) {
-        showMessage(browser.i18n.getMessage('errorsecret') + secret);
+        showMessage(browser.i18n.getMessage('errorsecret'));
         return;
     }
     updateSecret(function () {
         browser.storage.sync.get(function (result) {
             var index = Object.keys(result).length;
             var addSecret = {};
+            if (result[CryptoJS.MD5(secret)]) {
+                showMessage(browser.i18n.getMessage('errordupe'));
+                return;
+            }
             if (decodedPhrase) {
                 addSecret[CryptoJS.MD5(secret)] = {
                     account : account,
@@ -990,21 +994,4 @@ function resize(zoom) {
     var zoom = localStorage.zoom || '100';
     document.getElementById('resize_list').value = zoom;
     resize(zoom);
-
-    // Click extension name 5 times to show export box
-    var extName = document.getElementById('extName');
-    var count = 0;
-    var timer;
-    extName.onclick = function () {
-        clearTimeout(timer);
-        timer = setTimeout(function () {
-                count = 0;
-            }, 1000);
-
-        count++;
-        if (count == 5) {
-            count = 0;
-            showExport();
-        }
-    };
 })();
