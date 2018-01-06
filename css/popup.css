@@ -323,6 +323,8 @@ body {
 #security_save,
 #passphrase_ok,
 #message_close,
+#confirm_yes,
+#confirm_no,
 #exportButton,
 #resize_save {
     margin: 10px;
@@ -342,6 +344,8 @@ body {
 }
 
 #message_close,
+#confirm_yes,
+#confirm_no,
 #add_button,
 #exportButton,
 #security_save,
@@ -569,6 +573,8 @@ body {
 #menuClose:hover,
 #exportButton:hover,
 #message_close:hover,
+#confirm_yes:hover,
+#confirm_no:hover,
 #add_button:hover,
 #add_secret:hover,
 #add_qr:hover,
@@ -693,7 +699,8 @@ body {
     font-size: 16px;
 }
 
-#message {
+#message,
+#messageConfirm {
     position: absolute;
     width: 300px;
     padding: 10px;
@@ -704,4 +711,21 @@ body {
     box-shadow: 1px 1px 3px gray;
     display: none;
     z-index: 1000;
+}
+
+#confirm_buttons {
+    display: flex;
+    width: 100%;
+}
+
+#confirm_yes {
+    margin-left: auto;
+    margin-right: 5px;
+    width: 80px;
+}
+
+#confirm_no {
+    margin-left: 5px;
+    margin-right: auto;
+    width: 80px;
 }

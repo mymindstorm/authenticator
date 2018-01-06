@@ -33,6 +33,8 @@ document.getElementById('totp_label').innerText = browser.i18n.getMessage('based
 document.getElementById('hotp_label').innerText = browser.i18n.getMessage('based_on_counter');
 document.getElementById('add_button').innerText = browser.i18n.getMessage('ok');
 document.getElementById('message_close').innerText = browser.i18n.getMessage('ok');
+document.getElementById('confirm_yes').innerText = browser.i18n.getMessage('yes');
+document.getElementById('confirm_no').innerText = browser.i18n.getMessage('no');
 document.getElementById('account_label').innerText = browser.i18n.getMessage('account');
 document.getElementById('secret_label').innerText = browser.i18n.getMessage('secret');
 document.getElementById('menuName').innerText = browser.i18n.getMessage('settings');
@@ -312,6 +314,22 @@ function showMessage(msg, closeAction) {
     }
 }
 
+function showConfirm(msg) {
+    return new Promise(resolve => {
+        document.getElementById('confirm_content').innerText = msg;
+        document.getElementById('messageConfirm').style.display = 'block';
+        document.getElementById('confirm_yes').onclick = function () {
+            document.getElementById('messageConfirm').style.display = 'none';
+            resolve(true);
+
+        }
+        document.getElementById('confirm_no').onclick = function () {
+            document.getElementById('messageConfirm').style.display = 'none';
+            resolve(false);
+        }
+    })
+}
+
 function updateSecret(callback) {
     for (var i = 0; i < _secret.length; i++) {
         if (deleteIdList.indexOf(i) != -1) {
@@ -549,13 +567,16 @@ function sortCode() {
     return newSecret;
 }
 
-function deleteCode() {
+async function deleteCode() {
     var codeId = this.getAttribute('codeId');
     var key = this.getAttribute('key');
-    codeId = Number(codeId);
-    deleteIdList.push(codeId);
-    deleteKeyList.push(key);
-    document.getElementById('codeBox-' + codeId).style.display = 'none';
+    var delConfirm = await showConfirm(browser.i18n.getMessage('confirm_delete'));
+    if (delConfirm === true) {
+	codeId = Number(codeId);
+	deleteIdList.push(codeId);
+	deleteKeyList.push(key);
+	document.getElementById('codeBox-' + codeId).style.display = 'none';
+    }
 }
 
 function updateCode() {
