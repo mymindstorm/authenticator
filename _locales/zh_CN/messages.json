@@ -139,6 +139,10 @@
         "message": "问题反馈",
         "description": "Feedback."
     },
+    "translate": {
+        "message": "Translate",
+        "description": "Translate."
+    },
     "source": {
         "message": "源代码",
         "description": "Source Code."
