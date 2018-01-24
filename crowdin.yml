@@ -4,3 +4,4 @@ files:
     languages_mapping:
       two_letters_code:
         zh-CN: zh_CN
+        zh-TW: zh_TW
