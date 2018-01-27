@@ -32,7 +32,7 @@
         "description": "Information."
     },
     "add_qr": {
-        "message": "Scan QR Code",
+        "message": "Отсканировать QR-код",
         "description": "Scan QR Code."
     },
     "add_secret": {
@@ -80,7 +80,7 @@
         "description": "About."
     },
     "export_import": {
-        "message": "Export \/ Import",
+        "message": "Экспортировать и импортировать",
         "description": "Export and Import."
     },
     "settings": {
@@ -88,7 +88,7 @@
         "description": "Settings."
     },
     "security": {
-        "message": "Security",
+        "message": "Настройки Безопасности",
         "description": "Security."
     },
     "current_phrase": {
@@ -136,27 +136,27 @@
         "description": "Copied."
     },
     "feedback": {
-        "message": "Feedback",
+        "message": "Отзыв",
         "description": "Feedback."
     },
     "translate": {
-        "message": "Translate",
+        "message": "Перевод",
         "description": "Translate."
     },
     "source": {
-        "message": "Source Code",
+        "message": "Исходный код",
         "description": "Source Code."
     },
     "passphrase_info": {
-        "message": "Please enter your password to decrypt account data.",
+        "message": "Пожалуйста, введите ваш пароль, чтобы удалить учетную запись.",
         "description": "Password Info"
     },
     "passphrase": {
-        "message": "Password",
+        "message": "Пароль",
         "description": "Password Label."
     },
     "sync_clock": {
-        "message": "Sync Clock with Google",
+        "message": "Синхронизировать время с Google",
         "description": "Sync Clock"
     },
     "remember_phrase": {
@@ -188,7 +188,7 @@
         "description": "Counter Based"
     },
     "resize_popup_page": {
-        "message": "Resize Popup Page",
+        "message": "Изменение размера страницы Popup",
         "description": "Resize Popup Page"
     },
     "scale": {
