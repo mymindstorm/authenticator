@@ -1,10 +1,10 @@
 {
     "extName": {
-        "message": "Авторизация",
+        "message": "Authenticator",
         "description": "Extension Name."
     },
     "extShortName": {
-        "message": "Авторизация",
+        "message": "Authenticator",
         "description": "Extension Short Name."
     },
     "extDesc": {
@@ -32,7 +32,7 @@
         "description": "Information."
     },
     "add_qr": {
-        "message": "Отсканировать QR-код",
+        "message": "Scan QR Code",
         "description": "Scan QR Code."
     },
     "add_secret": {
@@ -80,7 +80,7 @@
         "description": "About."
     },
     "export_import": {
-        "message": "Экспортировать и импортировать",
+        "message": "Export \/ Import",
         "description": "Export and Import."
     },
     "settings": {
@@ -88,7 +88,7 @@
         "description": "Settings."
     },
     "security": {
-        "message": "Настройки Безопасности",
+        "message": "Security",
         "description": "Security."
     },
     "current_phrase": {
@@ -136,27 +136,27 @@
         "description": "Copied."
     },
     "feedback": {
-        "message": "Отзыв",
+        "message": "Feedback",
         "description": "Feedback."
     },
     "translate": {
-        "message": "Перевод",
+        "message": "Translate",
         "description": "Translate."
     },
     "source": {
-        "message": "Исходный код",
+        "message": "Source Code",
         "description": "Source Code."
     },
     "passphrase_info": {
-        "message": "Пожалуйста, введите ваш пароль, чтобы удалить учетную запись.",
+        "message": "Please enter your password to decrypt account data.",
         "description": "Password Info"
     },
     "passphrase": {
-        "message": "Пароль",
+        "message": "Password",
         "description": "Password Label."
     },
     "sync_clock": {
-        "message": "Синхронизировать время с Google",
+        "message": "Sync Clock with Google",
         "description": "Sync Clock"
     },
     "remember_phrase": {
@@ -188,7 +188,7 @@
         "description": "Counter Based"
     },
     "resize_popup_page": {
-        "message": "Изменение размера страницы Popup",
+        "message": "Resize Popup Page",
         "description": "Resize Popup Page"
     },
     "scale": {
