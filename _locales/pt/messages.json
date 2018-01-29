@@ -152,7 +152,7 @@
         "description": "Password Info"
     },
     "passphrase": {
-        "message": "Senha",
+        "message": "Password",
         "description": "Password Label."
     },
     "sync_clock": {
