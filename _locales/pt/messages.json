@@ -60,67 +60,67 @@
         "description": "Input Account and Secret."
     },
     "account": {
-        "message": "Account",
+        "message": "Conta",
         "description": "Account."
     },
     "secret": {
-        "message": "Secret",
+        "message": "Segredo",
         "description": "Secret."
     },
     "updateSuccess": {
-        "message": "Success.",
+        "message": "Sucesso",
         "description": "Update Success."
     },
     "updateFailure": {
-        "message": "Failure.",
+        "message": "Falhou.",
         "description": "Update Failure."
     },
     "about": {
-        "message": "About",
+        "message": "Sobre",
         "description": "About."
     },
     "export_import": {
-        "message": "Export \/ Import",
+        "message": "Exportar\/Importar",
         "description": "Export and Import."
     },
     "settings": {
-        "message": "Settings",
+        "message": "Configurações",
         "description": "Settings."
     },
     "security": {
-        "message": "Security",
+        "message": "Segurança",
         "description": "Security."
     },
     "current_phrase": {
-        "message": "Current Password",
+        "message": "Senha Atual",
         "description": "Current Password."
     },
     "new_phrase": {
-        "message": "New Password",
+        "message": "Nova Senha",
         "description": "New Password."
     },
     "phrase": {
-        "message": "Password",
+        "message": "Senha",
         "description": "Password."
     },
     "confirm_phrase": {
-        "message": "Confirm Password",
+        "message": "Confirmar Senha",
         "description": "Confirmm Password."
     },
     "confirm_delete": {
-        "message": "Are you sure you want to delete this secret?",
+        "message": "Tem certeza que deseja deletar esse segredo?",
         "description": "Confirm Delete."
     },
     "security_warning": {
-        "message": "Add a password to encrypt your secrets. No one can help you if you forget your password.",
+        "message": "Adicione uma senha para criptografar seus segredos. Ninguém pode te ajudar se você esquecer sua senha.",
         "description": "Password Warning."
     },
     "update": {
-        "message": "Update",
+        "message": "Atualizar",
         "description": "Update."
     },
     "phrase_incorrect": {
-        "message": "Some accounts and passwords do not match.",
+        "message": "Algumas contas e senhas não coincidem.",
         "description": "Password Incorrect."
     },
     "phrase_not_match": {
@@ -128,11 +128,11 @@
         "description": "Passwords Don't Match."
     },
     "encrypted": {
-        "message": "Encrypted",
+        "message": "Encriptado",
         "description": "Encrypted."
     },
     "copied": {
-        "message": "Copied",
+        "message": "Copiado",
         "description": "Copied."
     },
     "feedback": {
@@ -140,27 +140,27 @@
         "description": "Feedback."
     },
     "translate": {
-        "message": "Translate",
+        "message": "Traduzir",
         "description": "Translate."
     },
     "source": {
-        "message": "Source Code",
+        "message": "Código fonte",
         "description": "Source Code."
     },
     "passphrase_info": {
-        "message": "Please enter your password to decrypt account data.",
+        "message": "Por favor, digite sua senha para remover a conta.",
         "description": "Password Info"
     },
     "passphrase": {
-        "message": "Password",
+        "message": "Senha",
         "description": "Password Label."
     },
     "sync_clock": {
-        "message": "Sync Clock with Google",
+        "message": "Sincronizar relógio com Google",
         "description": "Sync Clock"
     },
     "remember_phrase": {
-        "message": "Remember Password",
+        "message": "Lembrar senha",
         "description": "Remember Password"
     },
     "clock_too_far_off": {
