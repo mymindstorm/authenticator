@@ -60,6 +60,7 @@ document.getElementById('menuSyncTime').innerHTML += browser.i18n.getMessage('sy
 document.getElementById('menuResize').innerHTML += browser.i18n.getMessage('resize_popup_page');
 document.getElementById('menuSource').innerHTML += browser.i18n.getMessage('source');
 document.getElementById('menuFeedback').innerHTML += browser.i18n.getMessage('feedback');
+document.getElementById('menuTranslate').innerHTML += browser.i18n.getMessage('translate');
 
 if (localStorage.notRememberPassphrase === 'true') {
     document.getElementById('remember_new_phrase').checked = false;

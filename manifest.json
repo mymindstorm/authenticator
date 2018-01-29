@@ -4,7 +4,7 @@
     "author": "Sneezry & mymindstorm",
     "homepage_url": "https://github.com/mymindstorm/authenticator",
     "short_name": "__MSG_extShortName__",
-    "version": "4.20",
+    "version": "4.21",
     "default_locale": "en",
     "description": "__MSG_extDesc__",
     "applications": {
