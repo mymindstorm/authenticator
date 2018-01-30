@@ -1,10 +1,10 @@
 {
     "extName": {
-        "message": "Authenticator",
+        "message": "Autenticador",
         "description": "Extension Name."
     },
     "extShortName": {
-        "message": "Authenticator",
+        "message": "Autenticador",
         "description": "Extension Short Name."
     },
     "extDesc": {
@@ -12,15 +12,15 @@
         "description": "Extension Description."
     },
     "added": {
-        "message": " has been added.",
+        "message": " foi adicionado.",
         "description": "Added Account."
     },
     "errorqr": {
-        "message": "Unrecognized QR code.",
+        "message": "Impossível reconhecer o QR Code.",
         "description": "QR Error."
     },
     "errorsecret": {
-        "message": "Secret error. Only base32 (A-Z, 2-7 and =) and hex (0-9 and A-F) secrets are supported.",
+        "message": "Erro Secreto. Somente Base32(A-Z, 2-7 and =) e HEX(0-9 and A-F) são suportados. Contudo, seu código secreto é: ",
         "description": "Secret Error."
     },
     "errordupe": {
@@ -32,19 +32,19 @@
         "description": "Information."
     },
     "add_qr": {
-        "message": "Scan QR Code",
+        "message": "Ler QR Code",
         "description": "Scan QR Code."
     },
     "add_secret": {
-        "message": "Manual Entry",
+        "message": "Inserir Manualmente",
         "description": "Manual Entry."
     },
     "close": {
-        "message": "Close",
+        "message": "Fechar",
         "description": "Close."
     },
     "ok": {
-        "message": "Ok",
+        "message": "OK",
         "description": "OK."
     },
     "yes": {
@@ -56,55 +56,55 @@
         "description": "No."
     },
     "err_acc_sec": {
-        "message": "Please enter Account and Secret.",
+        "message": "Por favor insira sua Conta e Segredo.",
         "description": "Input Account and Secret."
     },
     "account": {
-        "message": "Account",
+        "message": "Conta",
         "description": "Account."
     },
     "secret": {
-        "message": "Secret",
+        "message": "Segredo",
         "description": "Secret."
     },
     "updateSuccess": {
-        "message": "Success.",
+        "message": "Sucesso.",
         "description": "Update Success."
     },
     "updateFailure": {
-        "message": "Failure.",
+        "message": "Falha.",
         "description": "Update Failure."
     },
     "about": {
-        "message": "About",
+        "message": "Sobre",
         "description": "About."
     },
     "export_import": {
-        "message": "Export \/ Import",
+        "message": "Exportar \/ Importar",
         "description": "Export and Import."
     },
     "settings": {
-        "message": "Settings",
+        "message": "Configurações",
         "description": "Settings."
     },
     "security": {
-        "message": "Security",
+        "message": "Segurança",
         "description": "Security."
     },
     "current_phrase": {
-        "message": "Current Password",
+        "message": "Palavra Chave Atual",
         "description": "Current Password."
     },
     "new_phrase": {
-        "message": "New Password",
+        "message": "Nova Palavra Chave",
         "description": "New Password."
     },
     "phrase": {
-        "message": "Password",
+        "message": "Senha",
         "description": "Password."
     },
     "confirm_phrase": {
-        "message": "Confirm Password",
+        "message": "Confirme a Senha",
         "description": "Confirmm Password."
     },
     "confirm_delete": {
@@ -112,27 +112,27 @@
         "description": "Confirm Delete."
     },
     "security_warning": {
-        "message": "Add a password to encrypt your secrets. No one can help you if you forget your password.",
+        "message": "Esta Senha será usada para criptografar seu segredo. Ninguém pode ajudar caso você esqueça a Senha de Segurança.",
         "description": "Password Warning."
     },
     "update": {
-        "message": "Update",
+        "message": "Atualizar",
         "description": "Update."
     },
     "phrase_incorrect": {
-        "message": "Some accounts and passwords do not match.",
+        "message": "Algumas contas e Senhas não são iguais.",
         "description": "Password Incorrect."
     },
     "phrase_not_match": {
-        "message": "Two passwords don't match.",
+        "message": "Duas Senhas não são iguais.",
         "description": "Passwords Don't Match."
     },
     "encrypted": {
-        "message": "Encrypted",
+        "message": "Criptografado",
         "description": "Encrypted."
     },
     "copied": {
-        "message": "Copied",
+        "message": "Copiado",
         "description": "Copied."
     },
     "feedback": {
@@ -144,11 +144,11 @@
         "description": "Translate."
     },
     "source": {
-        "message": "Source Code",
+        "message": "Código Fonte",
         "description": "Source Code."
     },
     "passphrase_info": {
-        "message": "Please enter your password to decrypt account data.",
+        "message": "Digite a Senha para Descriptografar os dados da conta.",
         "description": "Password Info"
     },
     "passphrase": {
@@ -156,43 +156,43 @@
         "description": "Password Label."
     },
     "sync_clock": {
-        "message": "Sync Clock with Google",
+        "message": "Sincronizar Relógio com o Google",
         "description": "Sync Clock"
     },
     "remember_phrase": {
-        "message": "Remember Password",
+        "message": "Relembrar Senha",
         "description": "Remember Password"
     },
     "clock_too_far_off": {
-        "message": "Caution! Your local clock is too far off, please fix it before continuing.",
+        "message": "Cuidado! Seu relógio local está há muito tempo parado, por favor ajuste-o antes de continuar.",
         "description": "Local Time is Too Far Off"
     },
     "remind_backup": {
-        "message": "Do you have a backup for your secrets? No one can help you get back a locked account, don't wait until it's too late! This message appears once a month.",
+        "message": "Você tem um backup de seus segredos? Por favor, note que ninguém pode ajudar a recuperar sua conta. Não espere até que seja tarde. Nós te lembraremos de fazer o backup daqui a 30 dias.",
         "description": "Remind Backup"
     },
     "capture_failed": {
-        "message": "Capture failed, reload the page and try again.",
+        "message": "Captura falhou, por favor recarregue a página que você está visualizando e tente novamente.",
         "description": "Capture Failed"
     },
     "unencrypted_secret_warning": {
-        "message": "This secret is not encrypted! Click here to set a password.",
+        "message": "Este segredo não está criptografado. Clique aqui para configurar a senha para corrigir este problema.",
         "description": "Unencrypted Secret Warning"
     },
     "based_on_time": {
-        "message": "Time Based",
+        "message": "Tempo Baseado",
         "description": "Time Based"
     },
     "based_on_counter": {
-        "message": "Counter Based",
+        "message": "Contador Baseado",
         "description": "Counter Based"
     },
     "resize_popup_page": {
-        "message": "Resize Popup Page",
+        "message": "Redimensionar Página Popup",
         "description": "Resize Popup Page"
     },
     "scale": {
-        "message": "Zoom",
+        "message": "Escala",
         "description": "Scale"
     },
     "export_info": {
