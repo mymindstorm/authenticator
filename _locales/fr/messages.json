@@ -132,7 +132,7 @@
         "description": "Source Code."
     },
     "passphrase_info": {
-        "message": "Input passphrase to decrypt account data.",
+        "message": "Entrez le Mot de passe pour déchiffrer les données du compte.",
         "description": "Passphrase Info"
     },
     "sync_clock": {
@@ -140,7 +140,7 @@
         "description": "Sync Clock"
     },
     "remember_phrase": {
-        "message": "Remember Passphrase",
+        "message": "Mémoriser le mot de passe",
         "description": "Remember Passphrase"
     },
     "clock_too_far_off": {
@@ -152,11 +152,11 @@
         "description": "Remind Backup"
     },
     "capture_failed": {
-        "message": "Capture failed, please reload the page you are veiwing and try again.",
+        "message": "La capture a échoué, veuillez recharger la page que vous regardez et réessayez.",
         "description": "Capture Failed"
     },
     "unencrypted_secret_warning": {
-        "message": "This secret is not encrypted! Click here to set a passphrase to fix this issue.",
+        "message": "Ce secret n’est pas crypté ! Cliquez ici pour définir un mot de passe pour corriger cette erreur.",
         "description": "Unencrypted Secret Warning"
     },
     "based_on_time": {
@@ -172,11 +172,11 @@
         "description": "Resize Popup Page"
     },
     "scale": {
-        "message": "Scale",
+        "message": "Mise à l'échelle",
         "description": "Scale"
     },
     "export_info": {
-        "message": "Copy this text and save it somewhere else to backup your secrets. Want to add an account to another app? Hover over the top right part of any account and hit the hidden button.",
+        "message": "Copiez ce texte et enregistrez-le quelque part ailleurs pour sauvegarder vos secrets. Vous souhaitez ajouter un compte à une autre application ? Placez le curseur sur la partie supérieure droite de n’importe quel compte et cliquez sur le bouton caché.",
         "description": "Export menu info text"
     }
 }
