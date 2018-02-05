@@ -8,7 +8,7 @@
         "description": "Extension Short Name."
     },
     "extDesc": {
-        "message": "适用于Google身份验证器及战网安全令。",
+        "message": "Authenticator generates 2-Step Verification (TOTP) codes in your browser.",
         "description": "Extension Description."
     },
     "added": {
