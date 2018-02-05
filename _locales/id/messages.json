@@ -4,7 +4,7 @@
         "description": "Extension Name."
     },
     "extShortName": {
-        "message": "Authenticator",
+        "message": "Hbc",
         "description": "Extension Short Name."
     },
     "extDesc": {
@@ -12,7 +12,7 @@
         "description": "Extension Description."
     },
     "added": {
-        "message": " has been added.",
+        "message": " hbc",
         "description": "Added Account."
     },
     "errorqr": {
