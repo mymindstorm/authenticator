@@ -12,7 +12,7 @@
         "description": "Extension Description."
     },
     "added": {
-        "message": " has been added.",
+        "message": " 追加されました。",
         "description": "Added Account."
     },
     "errorqr": {
@@ -28,7 +28,7 @@
         "description": "Information."
     },
     "add_qr": {
-        "message": "Scan QR Code",
+        "message": "QRコードをスキャン",
         "description": "Scan QR Code."
     },
     "add_secret": {
@@ -36,7 +36,7 @@
         "description": "Manual Entry."
     },
     "close": {
-        "message": "Close",
+        "message": "閉じる",
         "description": "Close."
     },
     "ok": {
@@ -48,7 +48,7 @@
         "description": "Input Account and Secret."
     },
     "account": {
-        "message": "Account",
+        "message": "アカウント",
         "description": "Account."
     },
     "secret": {
@@ -56,11 +56,11 @@
         "description": "Secret."
     },
     "updateSuccess": {
-        "message": "Success.",
+        "message": "成功しました。",
         "description": "Update Success."
     },
     "updateFailure": {
-        "message": "Failure.",
+        "message": "失敗しました。",
         "description": "Update Failure."
     },
     "about": {
@@ -72,11 +72,11 @@
         "description": "Export and Import."
     },
     "settings": {
-        "message": "Settings",
+        "message": "設定",
         "description": "Settings."
     },
     "security": {
-        "message": "Security",
+        "message": "セキュリティ",
         "description": "Security."
     },
     "current_phrase": {
@@ -100,7 +100,7 @@
         "description": "Passphrase Warning."
     },
     "update": {
-        "message": "Update",
+        "message": "更新",
         "description": "Update."
     },
     "phrase_incorrect": {
@@ -116,7 +116,7 @@
         "description": "Encrypted."
     },
     "copied": {
-        "message": "Copied",
+        "message": "コピーしました。",
         "description": "Copied."
     },
     "feedback": {
@@ -124,11 +124,11 @@
         "description": "Feedback."
     },
     "translate": {
-        "message": "Translate",
+        "message": "翻訳",
         "description": "Translate."
     },
     "source": {
-        "message": "Source Code",
+        "message": "ソース コード",
         "description": "Source Code."
     },
     "passphrase_info": {
