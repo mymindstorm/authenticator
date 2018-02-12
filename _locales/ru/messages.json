@@ -8,7 +8,7 @@
         "description": "Extension Short Name."
     },
     "extDesc": {
-        "message": "For Google Authenticator and Battle.net Authenticator.",
+        "message": "Для Google Authenticator и аутентификатор Battle.net.",
         "description": "Extension Description."
     },
     "added": {
@@ -20,7 +20,7 @@
         "description": "QR Error."
     },
     "errorsecret": {
-        "message": "Secret Error. Only Base32(A-Z, 2-7 and =) and HEX(0-9 and A-F) are supported. However, your secret is: ",
+        "message": "Секретный ошибка. Только Base32 (A-Z, 2-7 и =) и ШЕСТНАДЦАТЕРИЧНЫЙ (0-9 и A-F) поддерживаются. Однако ваш секрет: ",
         "description": "Secret Error."
     },
     "info": {
